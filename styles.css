@@ -1,0 +1,136 @@
+@import "reset.css";
+@import "utility_classes.css";
+@import "callout_box.css";
+@import "portrait.css";
+@import "buttons.css";
+@import "hero_parallax.css";
+@import "bar_graph.css";
+@import "animations.css";
+@import "nav.css";
+
+
+:root {
+  --small-screen-max: 340px;
+  --medium-screen-min: 768px;
+  --large-screen-min: 1024px;
+  --padding: 5%;
+
+  --clr-primary-blue-400: hsl(200, 100%, 20%);
+  
+  --clr-accent-blue-500: hsl(190, 100%, 30%);
+  --clr-accent-blue-400: hsl(190, 100%, 40%);
+  --clr-accent-blue-300: hsl(190, 100%, 60%);
+  --clr-accent-blue-100: hsl(190, 100%, 80%);
+
+  --clr-primary-green-400: hsl(170, 65%, 40%);
+
+  --clr-accent-green-500: hsl(124, 45%, 50%);
+  --clr-accent-green-400: hsl(124, 67%, 70%);
+  --clr-accent-green-300: hsl(124, 67%, 80%);
+  --clr-accent-green-100: hsl(92, 100%, 97%);
+
+  --clr-neutral-900: hsl(220, 13%, 14%);
+  --clr-neutral-500: hsl(190, 63%, 59%);
+  --clr-neutral-300: hsl(43, 100%, 88%);
+  --clr-neutral-200: hsl(43, 100%, 93%);
+  --clr-neutral-100: hsl(0 0% 100%);
+
+  --ff-primary: "EB Garamond", serif;
+  --ff-secondary: "Cabin", sans-serif;
+
+  --ff-body: var(--ff-secondary);
+  --ff-heading: var(--ff-primary);
+
+  --fw-regular: 400;
+  --fw-semi-bold: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  --fs-050: .8125rem;
+  --fs-100: .875rem;
+  --fs-200: .9375rem;
+  --fs-300: 1rem;
+  --fs-400: 1.25rem;
+  --fs-500: 1.5rem;
+  --fs-550: 1.875rem;
+  --fs-600: 2.25rem;
+  --fs-700: 3rem;
+  --fs-800: 4rem;
+  --fs-900: 5rem;
+
+  --fs-body: var(--fs-500);
+  --fs-page-title: var(--fs-600);
+  --fs-primary-heading: var(--fs-600);
+  --fs-secondary-heading: var(--fs-500);
+  --fs-callout: var(--fs-550);
+  --fs-nav: var(--fs-400);
+  --fs-button: var(--fs-400);
+
+  --size-100: .25rem;
+  --size-200: .5rem;
+  --size-300: .75rem;
+  --size-400: 1rem;
+  --size-500: 1.5rem;
+  --size-600: 2.5rem;
+  --size-700: 5rem;
+  --size-800: 7.5rem;
+  --size-900: 10rem;
+}
+
+/* Font Sizes */
+/* Small screens */
+@media (max-width: 340px) {
+  :root {
+    --fs-body: var(--fs-400);
+/*     --fs-page-title: var(--fs-550); */
+    --fs-primary-heading: var(--fs-500);
+    --fs-secondary-heading: var(--fs-500);
+    --fs-callout: var(--fs-500);
+    --fs-nav: var(--fs-400);
+    --fs-button: var(--fs-400);
+  }
+}
+
+/* Medium screens */
+@media (min-width: 768px) {
+  :root {
+    --fs-body: var(--fs-400);
+/*     --fs-page-title: var(--fs-600); */
+    --fs-primary-heading: var(--fs-700);
+    --fs-secondary-heading: var(--fs-600);
+    --fs-callout: var(--fs-600);
+    --fs-nav: var(--fs-500);
+  }
+}
+
+/* Large screens */
+@media screen and (min-width: 1024px) {
+  :root {
+    --fs-body: var(--fs-500);
+/*     --fs-page-title: var(--fs-900); */
+    --fs-primary-heading: var(--fs-700);
+    --fs-secondary-heading: var(--fs-600);
+    --fs-callout: var(--fs-600);
+    --fs-nav: var(--fs-500);
+  }
+}
+
+
+
+/* ------ Breakpoints ------------------------- */
+/* ------ Small screens ----------------------- */
+
+/* Small screens */
+@media screen and (max-width: 340px) {
+  
+}
+
+/* Medium screens */
+@media screen and (min-width: 768px) {
+  
+}
+
+/* Large screens */
+@media screen and (min-width: 1120px) {
+  
+}

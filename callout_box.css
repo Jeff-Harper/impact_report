@@ -1,0 +1,72 @@
+/* ------ Callout Box ------------------------- */
+/* -------------------------------------------- */
+
+.callout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  padding-block: var(--size-600);
+}
+
+.callout__content {
+  text-align: center;
+  font-size: var(--fs-callout);
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-regular);
+  line-height: 1.4;
+  padding-block: var(--size-100);
+}
+
+@media screen and (min-width: 768px) {
+  .callout {
+    padding-block: 100px;
+  }
+
+  .callout__container {
+    display: flex;
+    width: 800px;
+    background-color: var(--clr-accent-green-100);
+    border-radius: 40px;
+    position: relative;
+  }
+
+  .callout__content {
+    color: var(--clr-primary-blue-400);
+    padding-block: 60px;
+    padding-inline: 80px;
+    font-family: var(--ff-heading);
+    font-weight: var(--fw-semi-bold);
+  }
+
+  .callout__content::after {
+    content: url(/images/callout_decoration.svg);
+    width: 100px;
+    position: absolute;
+    top: -52px;
+    right: 5%;
+  }
+
+  .callout__container::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--clr-accent-green-400);
+    border-radius: 45px;
+    top: 10px;
+    left: 10px;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .callout__container::after {
+    content: url(/images/callout_triangle.svg);
+    width: 60px;
+    height: 53px;
+    position: absolute;
+    bottom: -52px;
+    right: 15%;
+  }
+}
