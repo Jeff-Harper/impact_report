@@ -42,7 +42,7 @@
   }
 
   .callout__content::after {
-    content: url(/images/callout_decoration.svg);
+    content: url(/images/callout_decoration.svg?sanitize=true);
     width: 100px;
     position: absolute;
     top: -52px;
@@ -62,7 +62,7 @@
   }
 
   .callout__container::after {
-    content: url(/images/callout_triangle.svg);
+    content: url(/images/callout_triangle.svg?sanitize=true);
     width: 60px;
     height: 53px;
     position: absolute;
