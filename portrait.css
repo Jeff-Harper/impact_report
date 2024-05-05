@@ -24,6 +24,7 @@
   border-radius: 40px;
   left: -5%;
   position: absolute;
+  box-shadow: 3px 5px 25px 5px hsla(200, 100%, 20%, 0.2), 1px 3px 10px hsla(200, 100%, 20%, 0.15);
 }
 
 .signature {

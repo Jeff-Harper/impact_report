@@ -1,0 +1,23 @@
+.finance-entry {
+  display: grid;
+  grid-template-columns: auto max-content;
+  grid-template-areas: "chapter page";
+  align-items: end;
+  gap: 0 .25rem;
+}
+.finance-item {
+  grid-area: chapter;
+  position: relative;
+  overflow: hidden;
+}
+.finance-item::after {
+  position: absolute;
+  padding-left: 0.25ch;
+  content: " . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+  ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . "
+  ". . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . ";
+  text-align: right;
+}
+.finance-number {
+  grid-area: page;
+}

@@ -7,9 +7,17 @@
   from {opacity: 0; left: 100px;}
   to {opacity: 1; left: 0;}
 }
+@keyframes fade-in-up {
+  from {opacity: 0; bottom: -100px;}
+  to {opacity: 1; bottom: 0;}
+}
+@keyframes fade-in-down {
+  from {opacity: 0; top: 100px;}
+  to {opacity: 1; top: 0;}
+}
 @keyframes hero-slide-in-up {
   0% {
-    transform: translateY(100%);
+    transform: translateY(140%);
   }
   100% {
     transform: translateY(0);
@@ -22,27 +30,69 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .heading[data-is-intersecting] > span:nth-child(even) {
-    position: relative;
-    animation-name: fade-in-right;
-    animation-duration: 1.5s;
-  }
-  .heading[data-is-intersecting] > span:nth-child(odd) {
-    position: relative;
-    animation-name: fade-in-left;
-    animation-duration: 1.5s;
-  }
-  .heading-decoration[data-is-intersecting] {
-    animation: dash 2.5s linear forwards;
-    animation-delay: 0.5s;
-  }
-  .hero__container {
-    animation: hero-slide-in-up;
-    animation-duration: 1.8s;
+  :root {
+    --curve: cubic-bezier(0.33, 1, 0.68, 1);
+    --short-duration: 800ms;
+    --medium-duration: 1200ms;
+    --long-duration: 1600ms;
   }
 
-  .signature[data-is-intersecting] > path{
+  [class*="animate-fade"],
+  [class*="animate-heading"] > span:nth-child(even),
+  [class*="animate-heading"] > span:nth-child(odd) {
+    opacity: 0;
+    position: relative;
+  }
+
+  .animation-delay {
+    animation-delay: 0.2s;
+  }
+
+  .animate-heading[data-animate] > span:nth-child(even) {
+    animation-name: fade-in-right;
+    animation-duration: var(--medium-duration);
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  .animate-heading[data-animate] > span:nth-child(odd) {
+    animation-name: fade-in-left;
+    animation-duration: var(--medium-duration);
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  .animate-hero-slide-in-up {
+    animation-name: hero-slide-in-up;
+    animation-duration: var(--long-duration);
+    animation-timing-function: var(--curve);
+    animation-fill-mode: forwards;
+  }
+
+  .animate-fade-in-right[data-animate] {
+    animation-name: fade-in-right;
+    animation-duration: var(--short-duration);
+    animation-timing-function: var(--curve);
+    animation-fill-mode: forwards;
+  }
+  .animate-fade-in-left[data-animate] {
+    animation-name: fade-in-left;
+    animation-duration: var(--short-duration);
+    animation-timing-function: var(--curve);
+    animation-fill-mode: forwards;
+  }
+  .animate-fade-in-down[data-animate] {
+    animation-name: fade-in-down;
+    animation-duration: var(--short-duration);
+    animation-timing-function: var(--curve);
+    animation-fill-mode: forwards;
+  }
+  .animate-fade-in-up[data-animate] {
+    animation-name: fade-in-up;
+    animation-duration: var(--short-duration);
+    animation-timing-function: var(--curve);
+    animation-fill-mode: forwards;
+  }
+  .animate-dash[data-animate] path {
     animation: dash 2.5s linear forwards;
-    animation-delay: 0.25s;
+    animation-delay: 0.5s;
   }
 }

@@ -2,16 +2,18 @@
 /* -------------------------------------------- */
 
 .callout {
-  width: 100%;
+  display: block;
+  height: max-content;
   display: flex;
-  align-items: center;
   justify-content: center;
   position: relative;
   z-index: 10;
-  padding-block: var(--size-600);
 }
 
 .callout__content {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   font-size: var(--fs-callout);
   font-family: var(--ff-secondary);
@@ -20,14 +22,46 @@
   padding-block: var(--size-100);
 }
 
+.callout__content blockquote {
+  font-size: var(--fs-callout-quote);
+}
+.callout__content footer {
+  font-size: var(--fs-callout-quote-footer);
+  font-family: var(--ff-secondary);
+  font-style: italic;
+  font-weight: var(--fw-semi-bold);
+  text-align: right;
+  color: var(--clr-neutral-500);
+  padding: 20px 0 10px;
+}
+
 @media screen and (min-width: 768px) {
-  .callout {
-    padding-block: 100px;
-  }
+
+  /* .callout blockquote::before {
+    content: "“";
+    font-size: 400px;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    opacity: 0.075;
+    top: -100px;
+    left: 15px;
+  } */
+
+  /* .callout blockquote::after {
+    content: "”";
+    font-size: 400px;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    opacity: 0.075;
+    bottom: 260px;
+    right: 125px;
+  } */
 
   .callout__container {
     display: flex;
-    width: 800px;
+    max-width: 800px;
     background-color: var(--clr-accent-green-100);
     border-radius: 40px;
     position: relative;
@@ -35,10 +69,17 @@
 
   .callout__content {
     color: var(--clr-primary-blue-400);
-    padding-block: 60px;
-    padding-inline: 80px;
     font-family: var(--ff-heading);
     font-weight: var(--fw-semi-bold);
+  }
+
+  .callout__padding-large {
+    padding-block: 60px;
+    padding-inline: 40px;
+  }
+  .callout__padding-small {
+    padding-block: 40px;
+    padding-inline: 30px;
   }
 
   .callout__content::after {
@@ -59,9 +100,10 @@
     left: 10px;
     position: absolute;
     z-index: -1;
+    box-shadow: 3px 5px 25px 5px hsla(200, 100%, 20%, 0.1), 1px 3px 5px hsla(200, 100%, 20%, 0.05);
   }
 
-  .callout__container::after {
+  .callout__speech::after {
     content: url(/images/callout_triangle.svg?sanitize=true);
     width: 60px;
     height: 53px;

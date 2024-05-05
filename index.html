@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,48 +20,40 @@
 
 </head>
 
-<body>
+<body class="home" style="overflow: hidden">
+  
+  <!-- Primary site navigation -->
+  <!-- ----------------------- -->
+  <header class="primary-header flex-row">
+    <div class="logo">
+    </div>
+
+
+    <!-- <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false"><span class="sr-only">Menu</span></button> -->
+
+    <nav>
+      <label class="hamburger-menu" aria-controls="primary-navigation" aria-expanded="false">
+        <span class="sr-only">Menu</span>
+        <input type="checkbox" class="mobile-nav-toggle">
+      </label>
+      <ul id="primary-navigation" data-visible="false" class="primary-navigation flex-row">
+          <li class="active"><a href="index.html" active><span>Home</span></a>
+          <li><a href="about.html"><span>About</span></a>
+          <li><a href="blog.html"><span>Blog</span></a>
+          <li><a href="store.html"><span>Products</span></a>
+      </ul>
+    </nav>
+  </header>
+
+
 
   <!-- Cookies widget, copywright info -->
   <!-- ------------------------------- -->
-  <aside>
-    <!--  -->
-  </aside>
 
 
 
   <!-- Chapters (current page navigation) -->
   <!-- ---------------------------------- -->
-  <nav>
-    <!--  -->
-  </nav>
-
-  
-
-    <!-- Primary site navigation -->
-  <!-- ----------------------- -->
-<!--   <nav class="main-nav__container">
-    <ul class="main-nav__list">
-      <li>
-        <a href="index.html"><span>Home</span></a>
-      </li>
-      <li>
-        <a href="about.html"><span>About</span></a>
-      </li>
-      <li class="active">
-        <a href="blog.html" aria-current="page"><span>Blog</span></a>
-      </li>
-      <li>
-        <a href=""><span>Another</span></a>
-      </li>
-      <li>
-        <a href=""><span>Page</span></a>
-      </li>
-      <li>
-        <a href=""><span>and Another</span></a>
-      </li>
-    </ul>
-  </nav> -->
 
 
 
@@ -69,9 +61,9 @@
 
     <!-- Hero section, CTA -->
     <!-- ----------------- -->
-    <header class="hero__container">
+    <section class="hero__container | animate-hero-slide-in-up">
       <!-- <img src="/images/hero_background.svg?sanitize=true" class=" | background hero__background-trees" alt="background trees"> -->
-      <svg class="background hero__background-trees" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1421 542">
+      <svg class="background hero__image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1421 542">
         <defs>
           <style>
             .cls-1 {
@@ -127,7 +119,7 @@
         </g>
       </svg>
       <!-- <img src="/images/hero_midground.svg?sanitize=true" class=" | middleground hero__middleground-trees" alt="middleground trees"> -->
-      <svg class="middleground hero__middleground-trees" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1422 505">
+      <svg class="middleground hero__image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1422 505">
         <polygon style="fill: #66b691;" points="638.86 277.33 520.24 290.97 1 274.81 0 505 1421 505 1419 274.81 738.47 274.81 638.86 277.33"/>
         <path style="fill: #a0d882;" d="M830.7,305.73c-55.96-9.82-167.62-13.11-143.88-20.83,21.49-6.99,98.94-10.05,98.94-10.05l-47.73-.04-27.06.69c-19.1,1.29-53.12,4.7-61,12.94,1.05,8.07,15.72,9.01,44.93,14.64,28.86,5.57,83.79,10.6,71.01,13.87-44.37,9.41-672.91,72.04-672.91,72.04l440,1s306.26-39.45,340.02-66.73c5.21-4.21,3.66-9.47-42.32-17.54Z"/>
         <polygon style="fill: #126072;" points="1103.77 169.78 951.68 206.16 950.94 206.42 947.51 197.41 943.19 209.12 930.45 213.56 925.67 200.08 919.77 217.28 869.75 234.7 865.73 224.17 861.45 235.77 857.08 224.31 850.81 241.3 846.41 242.84 843.52 235.28 839.9 245.1 815.43 253.63 811.76 244.02 807.15 256.51 806.3 256.81 800.19 240.8 792.51 261.61 792.32 261.68 790.45 261.85 786.48 251.44 783.04 260.76 778.91 249.92 773.96 263.35 754.74 265.1 751.65 256.99 748.67 265.06 745.6 256.99 741.34 268.53 737.49 270.18 733.48 259.66 729.93 269.26 727.69 263.38 722.86 276.45 720.47 277.48 717.97 270.93 714.62 279.98 694.89 288.44 810.49 289.96 777.17 298.54 1190.59 334.03 1421 400 1422 0 1103.77 169.78"/>
@@ -139,12 +131,12 @@
         <polygon style="fill: #126072;" points="693.38 303.59 687.58 302.58 681.27 286.04 675.91 300.56 671.24 299.76 661.3 273.68 655.16 290.29 649.72 276.03 642.78 294.83 640.88 294.5 521.57 239.07 515.52 223.21 511.4 234.35 477.84 218.76 470.76 216.93 466.72 206.34 463.76 215.11 309 189 1 0 0 400 723.16 317.73 693.38 303.59"/>
       </svg>
       <!-- <img src="/images/hero_foreground.svg?sanitize=true" class=" | foreground hero__foreground-trees" alt="foreground trees"> -->
-      <svg class="foreground hero__foreground-trees" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1422 410">
+      <svg class="foreground hero__image" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1422 410">
         <polygon style="fill: #046;" points="1010.15 146.89 1002.1 125.4 992.21 152.69 956.37 164.28 949.41 168.35 938.59 139.47 924.68 177.84 917.01 157.35 903.22 195.38 877.51 210.42 865.4 178.09 852.59 213.43 846.34 196.74 831.69 237.14 831.78 237.18 827.64 239.6 814.41 204.29 801.46 240.03 799.34 239.78 788.58 211.04 780.92 232.16 776.24 219.65 769.96 236.97 731.64 247.98 721.95 222.09 711.25 251.59 699.95 221.42 685.96 260.01 674.51 253.96 675.21 253.66 662.38 219.42 654.6 240.88 640.89 204.27 631.17 231.08 578.29 203.16 568.74 201.46 555.46 174.73 549.18 187.81 536.28 153.39 521.88 193.11 501.12 189.41 488.95 156.94 478.63 185.41 416.76 174.38 404.44 168.06 392.32 135.72 384.34 157.74 234.38 80.77 1 0 0 410 1421 410 1422 1 1191 111 1010.15 146.89"/>
       </svg>
       <!--<img src=""class="" alt="logo" >-->
       <h1 class="page-title | ff-heading fs-page-title fw-semi-bold text-primary-blue-400">Lorem ipsum <i>dolor</i> sit amet, consectetur adipiscing elit</h1>
-    </header>
+    </section>
 
 
     <!-- Letter from CE -->
@@ -153,64 +145,66 @@
       <div class="container padding-block-600">
 
         <!-- Section heading -->
-          <h2 class="heading animate | padding-block-600 fs-primary-heading">
+          <h2 class="heading animate-heading | padding-block-600 fs-primary-heading">
             <span>Annual letter </span>
             <span>from Chief Executive </span>
             <span>Laura Gunn</span>
-            <svg class="heading-decoration animate" width="70%" height="30" viewBox="0 0 201 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="heading-decoration animate-dash" width="70%" height="30" viewBox="0 0 201 9" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 6.47282C67.0224 0.86285 134.132 -0.0179834 199 7" stroke="#7fe686" stroke-width="3" stroke-linecap="round"></path>
             </svg>
           </h2>
 
         <!-- Callout -->
-        <div class="callout | padding-block-600">
-          <div class="callout__container">
-            <p class="callout__content | fs-secondary-heading">Lorem ipsum <i>dolor sit</i> amet, consectetur adipiscing elit, sed do eiusmod magnor <i>tempor incididunt</i> ut labore.</p>
+        <div class="callout animate-fade-in-up | padding-block-600">
+          <div class="callout__container callout__speech">
+            <p class="callout__content callout__padding-large | fs-secondary-heading">Lorem ipsum <i>dolor sit</i> amet, consectetur adipiscing elit, sed do eiusmod magnor <i>tempor incididunt</i> ut labore.</p>
           </div>
         </div>
 
-        <div class="uneven-columns | padding-block-600">
+        <div class="uneven-columns-left | padding-block-700">
           <!-- Letter body -->
-          <div>
+          <div class="animate-fade-in-up">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia tenetur quisquam aspernatur mollitia, nesciunt commodi assumenda earum repellendus deserunt nam impedit laudantium magnam eos, magni sit consectetur animi porro vel, quaerat minima quam voluptatibus! Possimus?</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus hic voluptatem ad incidunt facilis cumque totam perferendis libero magnam quidem voluptates obcaecati omnis harum et alias, doloribus ea quod nobis. Unde, nulla? Temporibus similique culpa eaque quo obcaecati eveniet asperiores.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam facere explicabo totam ea nisi reprehenderit magni ullam at mollitia aspernatur nemo animi voluptatibus, non sapiente quaerat commodi. Corporis pariatur eveniet quaerat, odit praesentium quam cumque, ratione maxime, amet minima reiciendis quas recusandae nam id. Assumenda, culpa? Libero rem soluta, molestiae quibusdam obcaecati optio, dolorum sit architecto magnam explicabo deleniti quaerat?</p>
           </div>
 
           <!-- CE photo and signature (animated) -->
-          <figure class="portrait hero-image">
-            <img src="images/chief_executive_portrait.jpg" alt="Photo of CE Laura Smith" class="hero-image">
-            <svg class="signature animate" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1271.37 372.63">
-              <path d="M161.19,156.61c26.68,19.66,80.21,20.37,124.18-32.4,14.66-17.59,43-53,48-82,15.46-89.68-31.3,4.96-58,52-63,111-159,230-218,258-58.58,27.8-71-26-22-65,135.44-107.8,232.5-117.5,234-112,1.5,3.5-54.27,7.76-68,50-13,40,27,17,51-12,18.03-21.79,17.5-26.5,16-26s-29,53,6,34c36.5-21.5,37-33,38.5-33.5s2,5-5.5,26.5c-8.5,28.5,38.5,4.5,54-15s-9.5,19.5-6,23,9.5,1.5,15-2c26-15,38-26,45-19s-1.5,26.5-2,31,3,12,26-6c20.5-14.5,37.5-13.5,38-12s-27-3-34.5,19.5c-2,19,38.5-10.5,39-9s-23,20,8.5,11.5c43-11,109.5-16.5,116-15,21.5,1.5-26.5,50.5-39.5,26.5-4-8,55.5-85.5,87.5-172.5,0,0-8,26,14,22s78-21,109-34c0,0,12-2,3,19s-42,89-57,128-49,112-57,131-20,29-20-5,5-81,6-105c.81-19.4-30,8-9,28s91.02-57.52,97-58c16-3-24,26,21,26,18,0,40-21,38-30s-9,24,7,24,38-23,38-14-4.02,17.34,0,16c6-2,19-23,26-21s8,14,15,18c10,2,18-9,36-13,13-4-10,15-8,17s21-16,29-16,7.5,6.21,23,11,132,14,169,14"/>
-            </svg>
-          </figure>
+          <div class="animate-fade-in-up animation-delay">
+            <figure class="portrait">
+              <img src="images/chief_executive_portrait.jpg" alt="Photo of CE Laura Smith" class="hero-image">
+              <svg class="signature animate-dash" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1271.37 372.63">
+                <path d="M161.19,156.61c26.68,19.66,80.21,20.37,124.18-32.4,14.66-17.59,43-53,48-82,15.46-89.68-31.3,4.96-58,52-63,111-159,230-218,258-58.58,27.8-71-26-22-65,135.44-107.8,232.5-117.5,234-112,1.5,3.5-54.27,7.76-68,50-13,40,27,17,51-12,18.03-21.79,17.5-26.5,16-26s-29,53,6,34c36.5-21.5,37-33,38.5-33.5s2,5-5.5,26.5c-8.5,28.5,38.5,4.5,54-15s-9.5,19.5-6,23,9.5,1.5,15-2c26-15,38-26,45-19s-1.5,26.5-2,31,3,12,26-6c20.5-14.5,37.5-13.5,38-12s-27-3-34.5,19.5c-2,19,38.5-10.5,39-9s-23,20,8.5,11.5c43-11,109.5-16.5,116-15,21.5,1.5-26.5,50.5-39.5,26.5-4-8,55.5-85.5,87.5-172.5,0,0-8,26,14,22s78-21,109-34c0,0,12-2,3,19s-42,89-57,128-49,112-57,131-20,29-20-5,5-81,6-105c.81-19.4-30,8-9,28s91.02-57.52,97-58c16-3-24,26,21,26,18,0,40-21,38-30s-9,24,7,24,38-23,38-14-4.02,17.34,0,16c6-2,19-23,26-21s8,14,15,18c10,2,18-9,36-13,13-4-10,15-8,17s21-16,29-16,7.5,6.21,23,11,132,14,169,14"/>
+              </svg>
+            </figure>
+          </div>
+          
         </div>
       </div>
 
-      <svg style="fill: #ffeec2;" class="section-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 771 106.11">
-        <path class="cls-1" d="M771,106.11H0V6.46s167-30.14,386,39.75,385,26.5,385,26.5v33.39Z"/>
+      <!-- Section divider -->
+      <svg style="fill: #ffeec2; overflow: visible" class="section-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 80 771 20">
+        <path d="M771,106.11H0V6.46s167-30.14,386,39.75,385,26.5,385,26.5v33.39Z"/>
       </svg>
-
     </section>
 
 
     <!-- By the numbers -->
     <!-- -------------- -->
-    <section id="by-the-numbers" class="padding-block-700 text-primary-blue-400 bg-neutral-300">
-      <div class="container">
+    <section id="by-the-numbers" class="text-primary-blue-400 bg-neutral-300">
+      <div class="container padding-block-600">
 
         <!-- Section heading -->
-          <h2 class="heading animate | fs-primary-heading fw-bold">
+          <h2 class="heading animate-heading | fs-primary-heading fw-bold">
             <span>By the Numbers </span>
-            <svg class="heading-decoration animate" width="70%" height="30" viewBox="0 0 201 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="heading-decoration animate-dash" width="70%" height="30" viewBox="0 0 201 9" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 6.47282C67.0224 0.86285 134.132 -0.0179834 199 7" stroke="#00aacc" stroke-width="3" stroke-linecap="round"></path>
             </svg>
           </h2>
 
         <!-- Resources restored (cards) -->
-        <section class="padding-block-700">
-          
-          <div class="graph__card">
+        <div class="animate-fade-in-up | padding-block-700">
+          <div class="graph__card box-shadow">
             <div class="graph__container">
               <h3 class="graph__title">Resources Restored</h3>
 
@@ -238,142 +232,465 @@
         <!-- Lives changed (cards) -->
 
 
-          </div>
-        </div>
+      </div>
+      
+      <!-- Section divider -->
+      <svg style="fill: #008099; overflow: visible" class="section-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 80 771 20">
+        <path d="M771,106.11H0V6.46s167-30.14,386,39.75,385,26.5,385,26.5v33.39Z"/>
+      </svg>
     </section>
 
 
     <!-- Our Core Programs -->
-    <section id="core-programs" class="padding-block-700 bg-primary-blue-400">
-      <div class="container padding-block-600">
+    <!-- ----------------- -->
+    <section id="core-programs" class="bg-accent-blue-500">
+      <div class="container | padding-block-600">
 
         <!-- Section heading -->
-        <h2 class="heading animate | padding-block-400 fs-primary-heading">
+        <h2 class="heading | animate-heading | padding-block-400 fs-primary-heading">
           <span>Our Core </span>
           <span>Programs </span>
-          <svg class="heading-decoration animate" width="50%" height="30" viewBox="0 0 201 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="heading-decoration animate-dash" width="50%" height="30" viewBox="0 0 201 9" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M2 6.47282C67.0224 0.86285 134.132 -0.0179834 199 7" stroke="#7fe686" stroke-width="4" stroke-linecap="round"></path>
           </svg>
         </h2>
 
-        <div class="uneven-columns">
+        <div class="even-columns | padding-block-700">
+          <!-- Program list -->
+          <div id="accordionGroup" class="accordion | animate-fade-in-up">
+            <h3>
+              <button type="button" id="accordion1id" class="accordion-trigger" aria-expanded="false" aria-controls="sect1">
+                <span class="accordion-title">
+                  Field Crews
+                  <span class="accordion-icon"></span>
+                </span>
+              </button>
+            </h3>
+            <div id="sect1" class="accordion-panel" role="region" aria-labelledby="accordion1id" data-hidden>
+              <p>Field Crews serve outdoors restoring habitat, managing natural resources, and occasionally responding to natural disasters or community needs. The Veterans Corps are part of the Field Crew program.</p>
+            </div>
+
+            <h3>
+              <button type="button" id="accordion2id" class="accordion-trigger" aria-expanded="false" aria-controls="sect2">
+                <span class="accordion-title">
+                  Diversity (IDEC)
+                  <span class="accordion-icon"></span>
+                </span>
+              </button>
+            </h3>
+            <div id="sect2" class="accordion-panel" role="region" aria-labelledby="accordion2id" data-hidden>
+              <p>The Increasing Diversity in Environmental Careers (IDEC) program utilizes fellowship, mentorship, and internship opportunities to support underrepresented college students pursuing degrees in STEM/natural resources. IDEC is a partnership between the Department of Natural Resources, Conservation Corps, the Pollution Control Agency, and the Board of Water and Soil Resources.</p>
+            </div>
+
+            <h3>
+              <button type="button" id="accordion3id" class="accordion-trigger" aria-expanded="false" aria-controls="sect3">
+                <span class="accordion-title">
+                  Individual Placements
+                  <span class="accordion-icon"></span>
+                </span>
+              </button>
+            </h3>
+            <div id="sect3" class="accordion-panel" role="region" aria-labelledby="accordion3id" data-hidden>
+              <p>Individual Placement members serve directly with nonprofit or government agencies focused on natural resource management, water quality, community outreach, and more.</p>
+            </div>
+
+            <h3>
+              <button type="button" id="accordion4id" class="accordion-trigger" aria-expanded="false" aria-controls="sect4">
+                <span class="accordion-title">
+                  Summer Youth Corps
+                  <span class="accordion-icon"></span>
+                </span>
+              </button>
+            </h3>
+            <div id="sect4" class="accordion-panel" role="region" aria-labelledby="accordion4id" data-hidden>
+              <p>Youth participants connect with the outdoors through paid hands-on conservation work during this summer residential program. AmeriCorps members spend the summer living outdoors while leading and supervising the youth. Summer Youth Corps is dedicated to accessibility for the Deaf/Hard of Hearing community and runs ASL crews.</p>
+            </div>
+
+            <h3>
+              <button type="button" id="accordion5id" class="accordion-trigger" aria-expanded="false" aria-controls="sect5">
+                <span class="accordion-title">
+                  Youth Outdoors
+                  <span class="accordion-icon"></span>
+                </span>
+              </button>
+            </h3>
+            <div id="sect5" class="accordion-panel" role="region" aria-labelledby="accordion5id" data-hidden>
+              <p>Twin Cities youth connect with the outdoors through paid hands-on conservation work and community improvement projects. AmeriCorps members lead the youth in educational and service-learning activities and serve as Field Crews when not leading youth.</p>
+            </div>
+          </div>
 
           <!-- Callout -->
-          <div class="callout">
+          <div class="callout | animate-fade-in-up animation-delay">
             <div class="callout__container">
-              <div class="callout__content | fs-550 fw-bold">
-                <h3>Our Mission:</h3>
-                <p class="fs-50S0 fw-semi-bold">Through our wide range of program opportunities, youth and young adults grow as environmental stewards and leaders while giving back to the community through meaningful service.</p>
+              <div class="callout callout__content callout__padding-small">
+                <h3 class="fs-primary-heading fw-bold"><i>Our Mission:</i></h3>
+                <p class="ff-body fs-500 fw-regular">Through our wide range of program opportunities, youth and young adults grow as environmental stewards and leaders while giving back to the community through meaningful service.</p>
+                <svg style="padding: 20px 0; height: 300px; fill: none; stroke: #7fe686; stroke-linecap: round; stroke-miterlimit: 10; stroke-width: 3px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124.07 120">
+                  <line x1="86" y1="41" x2="86" y2="66.5"/>
+                  <line x1="86" y1="1.5" x2="86" y2="32"/>
+                  <path d="M63.5,44l8,5,17-10c4-3,2-8-3-6l-13,6-11-9-27-1-19,8-5,20c-1,4,4,6,6,2l5.21-15,12.79-4-3,22s-1,12,10,12h17.36l-5.36,17s-4,8,4,11"/>
+                  <path d="M58.5,38l-7,24,16,2s7,2,5,10l-12,21"/>
+                  <polyline points="86 18.79 110.5 18.79 105.5 11 110.5 2 93 2"/>
+                  <line x1="41.5" y1="74" x2="29.5" y2="110"/>
+                  <path d="M28.5,77l-8,29s-2,9,3,11"/>
+                  <line x1="1.5" y1="118.5" x2="6.5" y2="118.5"/>
+                  <line x1="13.07" y1="118.5" x2="122.57" y2="118.5"/>
+                  <polyline points="36.5 118 44.5 106 84.5 98"/>
+                  <polyline points="81.5 105 93.5 79 108.5 71"/>
+                  <polyline points="107.5 81 112.5 50 119.5 45 121.57 26.57"/>
+                  <circle cx="52" cy="12.5" r="10.5"/>
+                </svg>
               </div>
             </div>
           </div>
 
-          <!-- Program list -->
-          <div>
-            
 
 
-
-
-
-            <!-- <details class="details">
-              <summary>Field Crews</summary>
-              <p>Field Crews serve outdoors restoring habitat, managing natural resources, and occasionally responding to natural disasters or community needs. The Veterans Corps are part of the Field Crew program.</p>
-            </details>
-            <details class="details">
-              <summary>Increasing Diversity in Environmental Careers (IDEC)</summary>
-              <p>The IDEC program utilizes fellowship, mentorship, and internship opportunities to support underrepresented college students pursuing degrees in STEM/natural resources. IDEC is a partnership between the Department of Natural Resources, Conservation Corps, the Pollution Control Agency, and the Board of Water and Soil Resources.</p>
-            </details>
-            <details class="details">
-              <summary>Individual Placements</summary>
-              <p>Individual Placement members serve directly with nonprofit or government agencies focused on natural resource management, water quality, community outreach, and more.</p>
-            </details>
-            <details class="details">
-              <summary>Summer Youth Corps</summary>
-              <p>Youth participants connect with the outdoors through paid hands-on conservation work during this summer residential program. AmeriCorps members spend the summer living outdoors while leading and supervising the youth. Summer Youth Corps is dedicated to accessibility for the Deaf/Hard of Hearing community and runs ASL crews.</p>
-            </details>
-            <details class="details">
-              <summary>Youth Outdoors</summary>
-              <p>Twin Cities youth connect with the outdoors through paid hands-on conservation work and community improvement projects. AmeriCorps members lead the youth in educational and service-learning activities and serve as Field Crews when not leading youth.</p>
-            </details> -->
-          </div>
         </div>
-
       </div>
+
+      <!-- Section divider -->
+      <svg style="fill: #ffeec2; overflow: visible" class="section-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 80 771 20">
+        <path d="M771,106.11H0V6.46s167-30.14,386,39.75,385,26.5,385,26.5v33.39Z"/>
+      </svg>
     </section>
 
-    <section id="new-programs" class="padding-block-600 text-primary-blue-400">
-      <div class="container">
+
+    <!-- New Programs and Initiatives -->
+    <!-- ---------------------------- -->
+    <section id="new-programs" class="text-primary-blue-400 bg-neutral-300">
+      <div class="container padding-block-600">
 
         <!-- Section heading -->
-        <div class="padding-block-600">
-          <h2 class="heading | fs-primary-heading fw-bold">
-            <span>New Programs </span>
-            <span>and Initiative </span>
-          </h2>
-          <svg class="heading-decoration" width="201" height="9" viewBox="0 0 201 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M2 6.47282C67.0224 0.86285 134.132 -0.0179834 199 7" stroke="#43D6B9" stroke-width="4" stroke-linecap="round"></path>
+        <h2 class="heading animate-heading | fs-primary-heading fw-bold">
+          <span>New Programs </span>
+          <span>and Initiatives </span>
+          <svg class="heading-decoration animate-dash" width="70%" height="30" viewBox="0 0 201 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 6.47282C67.0224 0.86285 134.132 -0.0179834 199 7" stroke="#00aacc" stroke-width="3" stroke-linecap="round"></path>
           </svg>
+        </h2>
+
+        <!-- Veterans Corps -->
+        <div class="uneven-columns-left | padding-block-700">
+          <div class="animate-fade-in-up">
+            <h3 class="ff-heading fs-secondary-heading fw-semi-bold text-accent-blue-500">Launching the Veterans Corps</h3>
+            <p>In 2023 Conservation Corps launched the Veterans Corps, a new AmeriCorps program for veterans to participate in nonmilitary service on a Conservation Corps Field Crew. Members gain the skills needed for a career in natural resources and have access to support and resources for transitioning to civilian life.</p>
+          </div>
+          <div style="background: green" class="animate-fade-in-up animation-delay"></div>
         </div>
 
-          <div>
-            <h3>Launching the Veterans Corps</h3>
-            <p>In 2023 Conservation Corps launched the Veterans Corps, a new AmeriCorps program for veterans to participate in nonmilitary service on a Conservation Corps Field Crew. Members gain the skills needed for a career in natural resources and have access to support and resources for transitioning to civilian life.</p>
-            <p>Grace Anne, a 2022 Veterans Corps AmeriCorps Member, shared that <b><i>“AmeriCorps adds crucial volunteer experience in a civilian setting to your resume while simultaneously offering incredible experiences for the kind of service we crave, such as wildland firefighting and disaster response.”</i></b></p>
-            <p>The Veterans Corps program is funded by the Department of Veterans Affairs and the Environment and Natural Resources Trust Fund.</p>
-          </div>
-          <blockquote>
-            “I learned during both my terms with the Conservation Corps that I want to work in the public sector and work in visitor services. Learning this, along with the training that was provided to me, was crucial for my career development.” 
-          </blockquote>
-          <p class="citation">Grace Anne, a 2022 Veterans Corps AmeriCorps Member</p>
-          <div class="callout">
-            <h3>Aiding in Flood Response</h3>
+        <!-- Aiding in Flood Response -->
+        <div class="uneven-columns-right | padding-block-700">
+          <div style="background: green" class="animate-fade-in-up"></div>
+          <div class="animate-fade-in-up animation-delay">
+            <h3 class="ff-heading fs-secondary-heading fw-semi-bold text-accent-blue-500">Aiding in Flood Response</h3>
             <p>After historic flooding hit our communities, AmeriCorps members from Conservation Corps spent over 3,000 hours with volunteers and other responders filling sandbags and reinforcing sandbag walls around homes. Corpsmembers and crews came together from across the state to aid in the flood response.</p>
             <p>FirstName LastName, an AmeriCorps member on the Field Crew, described what it meant to be part of this team effort in a blog post, <b><i>“We organized together and became one big team. Our team building and communication improved over the days and [we] became closer to one another.”</i></b></p>
             <p>Members served in partnership with the Department of Natural Resources and alongside community members.</p>
           </div>
         </div>
       </div>
+
+      <!-- Section divider -->
+      <svg style="fill: #004466; overflow: visible" class="section-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 80 771 20">
+        <path d="M771,106.11H0V6.46s167-30.14,386,39.75,385,26.5,385,26.5v33.39Z"/>
+      </svg>
     </section>
 
-    <section id="new-programs" class="sticky">
-      <div class="inner">
-        <div class="flex column">
-          <div class="flex column heading">
-            <h2>
-              <span>Our Core </span>
-              <span>Programs</span>
-            </h2>
-            <svg class="heading-decoration"></svg>
+
+    <!-- Testimonials -->
+    <!-- ------------ -->
+    <section id="testimonials" class="bg-primary-blue-400">
+      <div class="container | padding-block-600">
+
+        <!-- Section heading -->
+        <h2 class="heading | animate-heading | fs-primary-heading fw-bold">
+          <span>Hear from </span>
+          <span>Some of Our </span>
+          <span>Volunteers </span>
+          <svg class="heading-decoration | animate-dash" width="60%" height="30" viewBox="0 0 201 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 6.47282C67.0224 0.86285 134.132 -0.0179834 199 7" stroke="#7fe686" stroke-width="4" stroke-linecap="round"></path>
+          </svg>
+        </h2>
+
+        <div class="padding-block-700">
+          <!-- Dynamic quote -->
+          <div class="callout | animate-fade-in-up | padding-block-400">
+            <div class="callout__container callout__speech">
+              <div class="callout__content callout__padding-large">
+                <blockquote>
+                  <p>“AmeriCorps adds crucial volunteer experience in a civilian setting to your resume while simultaneously offering incredible experiences for the kind of service we crave, such as wildland firefighting and disaster response.”</p>
+                  <footer>
+                    —Grace Anne, 2022 Veterans Corps AmeriCorps Member
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
           </div>
-          <div class="callout">
-            <h3>Launching the Veterans Corps</h3>
-            <p>In 2023 Conservation Corps launched the Veterans Corps, a new AmeriCorps program for veterans to participate in nonmilitary service on a Conservation Corps Field Crew. Members gain the skills needed for a career in natural resources and have access to support and resources for transitioning to civilian life.</p>
-            <p>Grace Anne, a 2022 Veterans Corps AmeriCorps Member, shared that <b><i>“AmeriCorps adds crucial volunteer experience in a civilian setting to your resume while simultaneously offering incredible experiences for the kind of service we crave, such as wildland firefighting and disaster response.”</i></b></p>
-            <p>The Veterans Corps program is funded by the Department of Veterans Affairs and the Environment and Natural Resources Trust Fund.</p>
-          </div>
-          <blockquote>
-            “I learned during both my terms with the Conservation Corps that I want to work in the public sector and work in visitor services. Learning this, along with the training that was provided to me, was crucial for my career development.” 
-          </blockquote>
-          <p class="citation">Grace Anne, a 2022 Veterans Corps AmeriCorps Member</p>
-          <div class="callout">
-            <h3>Aiding in Flood Response</h3>
-            <p>After historic flooding hit our communities, AmeriCorps members from Conservation Corps spent over 3,000 hours with volunteers and other responders filling sandbags and reinforcing sandbag walls around homes. Corpsmembers and crews came together from across the state to aid in the flood response.</p>
-            <p>FirstName LastName, an AmeriCorps member on the Field Crew, described what it meant to be part of this team effort in a blog post, <b><i>“We organized together and became one big team. Our team building and communication improved over the days and [we] became closer to one another.”</i></b></p>
-            <p>Members served in partnership with the Department of Natural Resources and alongside community members.</p>
+
+          <!-- Portraits -->
+          <div class="even-columns | animate-fade-in-up | padding-block-700">
+            <figure class="portrait">
+              <img src="images/chief_executive_portrait.jpg" alt="Photo of CE Laura Smith" class="hero-image">
+            </figure>
+
+            <figure class="portrait">
+              <img src="images/chief_executive_portrait.jpg" alt="Photo of CE Laura Smith" class="hero-image">
+            </figure>
+
+            <figure class="portrait">
+              <img src="images/chief_executive_portrait.jpg" alt="Photo of CE Laura Smith" class="hero-image">
+            </figure>
           </div>
         </div>
       </div>
+
+      <!-- Section divider -->
+      <svg style="fill: #ffeec2; overflow: visible" class="section-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 80 771 20">
+        <path d="M771,106.11H0V6.46s167-30.14,386,39.75,385,26.5,385,26.5v33.39Z"/>
+      </svg>
+    </section>
+    
+
+    <!-- Financials -->
+    <!-- ---------- -->
+    <section id="financials" class="text-primary-blue-400 bg-neutral-300">
+      <div class="container padding-block-600">
+
+        <!-- Section heading -->
+        <h2 class="heading animate-heading | fs-primary-heading fw-bold">
+          <span>Financials </span>
+          <svg class="heading-decoration animate-dash" width="50%" height="20" viewBox="0 0 201 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 6.47282C67.0224 0.86285 134.132 -0.0179834 199 7" stroke="#00aacc" stroke-width="4" stroke-linecap="round"></path>
+          </svg>
+        </h2>
+
+        <!-- Support and revenue -->
+        <p>For the year ended December 31, 2023</p>
+        <div class="uneven-columns-left | padding-block-600">
+          <div class="animate-fade-in-up">
+            <h3 class="ff-heading fs-secondary-heading fw-semi-bold text-accent-blue-500" style="line-height: 1.5;">Support and Revenue</h3>
+            <div class="padding-block-200">
+              <div class="finance-entry">
+                <div class="finance-item">AmeriCorps Grants</div>
+                <div class="finance-number">$ 2,254,955</div>
+              </div>
+              <div class="finance-entry">
+                <div class="finance-item">Contributions</div>
+                <div class="finance-number">$ 219,823</div>
+              </div>
+              <div class="finance-entry">
+                <div class="finance-item">State Appropriations</div>
+                <div class="finance-number">$ 1,213,066</div>
+              </div>
+              <div class="finance-entry">
+                <div class="finance-item">Partner Support and Earned Revenue</div>
+                <div class="finance-number">$ 5,155,322</div>
+              </div>
+              <div class="finance-entry">
+                <div class="finance-item">Investment and Miscellaneous</div>
+                <div class="finance-number">$ (72,308)</div>
+              </div>
+              <div class="finance-entry">
+                <div class="finance-item fw-bold"><b>Total Support and Revenue</b></div>
+                <div class="finance-number fw-bold"><b>$ 8,770,858</b></div>
+              </div>
+            </div>
+          </div>
+          <div style="background: green" class="animate-fade-in-up animation-delay"></div>
+        </div>
+
+        <!-- Expenses -->
+        <div class="uneven-columns-right | padding-block-600">
+          <div style="background: green" class="animate-fade-in-up"></div>
+          <div class="animate-fade-in-up animation-delay">
+            <h3 class="ff-heading fs-secondary-heading fw-semi-bold text-accent-blue-500">Expenses</h3>
+            <div class="padding-block-200">
+              <div class="finance-entry">
+                <div class="finance-item">Programs</div>
+                <div class="finance-number">$ 7,501,098</div>
+              </div>
+              <div class="finance-entry">
+                <div class="finance-item">General and Administrative</div>
+                <div class="finance-number">$ 1,706,102</div>
+              </div>
+              <div class="finance-entry">
+                <div class="finance-item fw-bold">Total Expenses</div>
+                <div class="finance-number fw-bold">$ 9,207,200</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Organizational totals -->
+        <div class="uneven-columns-left | padding-block-600">
+          <div class="animate-fade-in-up">
+            <h3 class="ff-heading fs-secondary-heading fw-semi-bold text-accent-blue-500">Organizational Totals</h3>
+            <div class="padding-block-200">
+              <div class="finance-entry">
+                <div class="finance-item">Change in Net Assets</div>
+                <div class="finance-number">$ (436,342)</div>
+              </div>
+              <div class="finance-entry">
+                <div class="finance-item">Beginning Net Assets</div>
+                <div class="finance-number">$ 6,215,241</div>
+              </div>
+              <div class="finance-entry">
+                <div class="finance-item fw-bold"><b>Ending Net Assets</b></div>
+                <div class="finance-number fw-bold"><b>$ 5,778,899</b></div>
+              </div>
+            </div>
+          </div>
+          <div style="background: green" class="flex flex-column | animate-fade-in-up animation-delay"></div>
+        </div>
+      </div>
+
+      <!-- Thank you to our donors -->
+      <div class="callout animate-fade-in-up | padding-block-600">
+        <div class="callout__container">
+          <p class="callout__content callout__padding-large | fs-secondary-heading">Thank you to our generous donors who contributed during fiscal year 2023 to support the next generation of environmental stewards!</p>
+        </div>
+      </div>
+
+      <!-- Section divider -->
+      <svg style="fill: #008099; overflow: visible" class="section-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 80 771 20">
+        <path d="M771,106.11H0V6.46s167-30.14,386,39.75,385,26.5,385,26.5v33.39Z"/>
+      </svg>
     </section>
 
 
-      
+    <!-- JEDI commitment -->
+    <!-- ------------------------ -->
+    <section id="jedi" class="bg-accent-blue-500">
+      <div class="container | padding-block-500">
 
+        <!-- Section heading -->
+        <h2 class="heading | animate-heading | padding-block-400 fs-primary-heading">
+          <span>Our Commitment to </span>
+          <span>Justice, Equity </span>
+          <span>Diversity & Inclusion </span>
+          <svg class="heading-decoration animate-dash" width="50%" height="30" viewBox="0 0 201 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 6.47282C67.0224 0.86285 134.132 -0.0179834 199 7" stroke="#7fe686" stroke-width="4" stroke-linecap="round"></path>
+          </svg>
+        </h2>
+
+        <div class="padding-block-400">
+          <!-- Callout 01 -->
+          <div class="callout | animate-fade-in-up | padding-block-600">
+            <div class="callout__container">
+              <div class="callout__content callout__padding-large">
+                <h3 class="fs-900 fw-bold">01</h3>
+                <p class="ff-body fs-500 fw-regular">All staff members and 10 AmeriCorps Field Specialists completed a Racial Equity Certification in 2023. New staff members continue to complete the certification as they are onboarded.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="even-columns">
+            <!-- Callout 02 -->
+            <div class="callout | animate-fade-in-up">
+              <div class="callout__container">
+                <div class="callout__content callout__padding-large">
+                  <h3 class="fs-900 fw-bold">02</h3>
+                  <p class="ff-body fs-500">Staff created and strengthened relationships with Tribal Nations and Native-led organizations to increase the number of projects completed with these partners. Partnering with local tribes, together we created a dedicated Indigenous Conservation Corps Crew.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Callout 03 -->
+            <div class="callout | animate-fade-in-up animation-delay">
+              <div class="callout__container">
+                <div class="callout__content callout__padding-large">
+                  <h3 class="fs-900 fw-bold">03</h3>
+                  <p class="ff-body fs-500 fw-regular">The Conservation Corps board and senior leadership staff completed the Intercultural Development Inventory assessment which revealed an opportunity for improvement in engagement, empathy and understanding of each other’s cross-cultural competence.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          <div class="text-center flex-column | animate-fade-in-up | fs-600 padding-block-600">
+            <p class="padding-block-100">Learn more about our progress and read our full Justice, Equity, Diversity, & Inclusion (JEDI) statement!
+            </p>
+            <button>Click here!</button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Section divider -->
+      <svg style="fill: #ffeec2; overflow: visible" class="section-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 80 771 20">
+        <path d="M771,106.11H0V6.46s167-30.14,386,39.75,385,26.5,385,26.5v33.39Z"/>
+      </svg>
+    </section>
+
+
+    <!-- New Programs and Initiatives -->
+    <!-- ---------------------------- -->
+    <section id="new-programs" class="text-primary-blue-400 bg-neutral-300">
+      <div class="container padding-block-600">
+
+        <!-- Section heading -->
+        <h2 class="heading animate-heading | fs-primary-heading fw-bold">
+          <span>Supporting </span>
+          <span>Our ASL Crews </span>
+          <svg class="heading-decoration animate-dash" width="70%" height="30" viewBox="0 0 201 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2 6.47282C67.0224 0.86285 134.132 -0.0179834 199 7" stroke="#00aacc" stroke-width="3" stroke-linecap="round"></path>
+          </svg>
+        </h2>
+
+        <div class="padding-block-600">
+          <!-- Veterans Corps -->
+          <div class="uneven-columns-left | padding-block-300">
+            <div class="animate-fade-in-up">
+              <p>Conservation Corps has run various iterations of American Sign Language (ASL) crews since the late 1970s through our Summer Youth Corps (SYC) program. Even through evolving program models, inclusive programming and a sense of community have always been important to the SYC experience.</p>
+              <p>In 2023, for the first time in a decade, SYC ran an ASL backcountry Wilderness Crew, in addition to the usual first-year ASL crews who complete front-country projects. Using only hand tools, the ASL Wilderness Crew completed five miles of trail rehabilitation in our National Park.</p>
+            </div>
+            <div style="background: green" class="animate-fade-in-up animation-delay"></div>
+          </div>
+
+          <!-- Aiding in Flood Response -->
+          <div class="uneven-columns-right | padding-block-300">
+            <div style="background: green" class="animate-fade-in-up"></div>
+            <div class="animate-fade-in-up animation-delay">
+              <p>The crew was made up of 3 AmeriCorps Crew Leaders and 5 returning youth that included Deaf, Hard of Hearing, CODA (Child of Deaf Adult), and hearing members, and one ASL interpreter. Everyone on the crew was expected to communicate in ASL as part of this immersive experience. Members found this model to be educational and empowering, as it offered enhanced communication and support for Deaf members through a three-leader model and daily activities focused on practicing ASL for the hearing youth. </p>
+              <p>We continue to foster and grow the SYC community, and work towards our vision of creating a world where everyone has equitable access to nature. This not only includes improving our ASL Crew model and program experience, but finding more ways to make all of our programming more accessible and building valued partnerships.</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- Section divider -->
+      <svg style="fill: #004466; overflow: visible" class="section-divider" xmlns="http://www.w3.org/2000/svg" viewBox="0 80 771 20">
+        <path d="M771,106.11H0V6.46s167-30.14,386,39.75,385,26.5,385,26.5v33.39Z"/>
+      </svg>
+    </section>
+
+
+    <!-- Contact info, authorship info -->
+    <footer id="footer" class="bg-primary-blue-400 padding-block-700">
+      <div class="container even-columns">
+        <div>
+          <h4 class="fs-500">Follow Us</h4>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Donate</h4>
+          
+        </div>
+        <div>
+          <h4>Socials</h4>
+
+        </div>
+      </div>
+    </footer>
     
   </main>
 
-    <!-- Contact info, authorship info -->
-    <footer></footer>
 
   <script src="scprits.js"></script>
 </body>
